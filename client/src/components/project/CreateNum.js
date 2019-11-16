@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { insertNumber } from "../../store/actions/numberActions";
+
 
 class CreateNum extends Component {
   constructor(props) {
@@ -44,17 +43,6 @@ class CreateNum extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    createNum: randomNumber =>
-      dispatch({
-        type: insertNumber.INSERT_NUMBER,
-        payload: randomNumber
-      })
-  };
-};
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(CreateNum);
+
+export default CreateNum;
